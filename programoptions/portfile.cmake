@@ -1,0 +1,15 @@
+include(vcpkg_common_functions)
+vcpkg_from_github(
+    OUT_SOURCE_PATH SOURCE_PATH
+    REPO Fytch/ProgramOptions.hxx
+    REF 159cb7d4265b1de6b1fd4fb2fafa8123c2a0f69a
+    SHA512 890c524179dbd4d1132fa6947df7c3cfa46a9c6ad1c96ab5dac9db5a0e49b561dfb3c72bf88723e29c7696906fb0f5ee3b9069ccafa6122f876fe769a780f7f4
+    HEAD_REF develop
+)
+
+file(GLOB HEADER_FILES ${SOURCE_PATH}/include/*.hxx)
+file(COPY ${HEADER_FILES} DESTINATION ${CURRENT_PACKAGES_DIR}/include)
+
+file(INSTALL ${SOURCE_PATH}/LICENSE.txt DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT} RENAME copyright)
+file(INSTALL ${SOURCE_PATH}/README.md DESTINATION ${CURRENT_PACKAGES_DIR}/share/${PORT})
+
