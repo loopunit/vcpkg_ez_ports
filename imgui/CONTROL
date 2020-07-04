@@ -2,9 +2,3 @@ Source: imgui
 Version: 1.77
 Homepage: https://github.com/ocornut/imgui
 Description: Bloat-free Immediate Mode Graphical User interface for C++ with minimal dependencies.
-
-Feature: dx11_bindings
-Description: make available bindings header and source files for supported implementations
-
-Feature: dx12_bindings
-Description: make available bindings header and source files for supported implementations
