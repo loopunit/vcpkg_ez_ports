@@ -10,11 +10,20 @@ vcpkg_from_github(
 
 file(COPY ${CMAKE_CURRENT_LIST_DIR}/CMakeLists.txt DESTINATION ${SOURCE_PATH})
 
+vcpkg_check_features(
+	OUT_FEATURE_OPTIONS 
+		FEATURE_OPTIONS
+	FEATURES
+		dx12_bindings    IMGUI_USE_DX12_BINDINGS
+	INVERTED_FEATURES
+		dx12_bindings    IMGUI_USE_DX11_BINDINGS
+)
+
 vcpkg_configure_cmake(
     SOURCE_PATH ${SOURCE_PATH}
     PREFER_NINJA
     OPTIONS
-        -DIMGUI_USE_DX11_BINDINGS=ON
+        ${FEATURE_OPTIONS}
     OPTIONS_DEBUG
         -DIMGUI_SKIP_HEADERS=ON
 )
