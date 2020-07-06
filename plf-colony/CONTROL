@@ -1,0 +1,4 @@
+Source: plf-colony
+Version: 3.7.3
+Homepage: https://github.com/mattreecebentley/plf_colony
+Description: An unordered data container providing fast iteration/insertion/erasure while maintaining pointer/iterator/reference validity to non-erased elements.
