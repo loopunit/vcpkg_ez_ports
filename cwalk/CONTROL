@@ -1,0 +1,4 @@
+Source: cwalk
+Version: 1.1.1
+Homepage: https://github.com/likle/cwalk
+Description: This is a lighweight C path manipulation library. It is currently compiled and tested under Windows, MacOS and Linux. It supports UNIX and Windows path styles on all platforms.
