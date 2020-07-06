@@ -31,12 +31,10 @@ install(
 	RUNTIME DESTINATION bin
 )
 
-if(NOT CWALK_SKIP_HEADERS)
-    install(FILES
-        ${CMAKE_CURRENT_SOURCE_DIR}/include/cwalk.h
-        DESTINATION include
-    )
-endif()
+install(FILES
+	${CMAKE_CURRENT_SOURCE_DIR}/include/cwalk.h
+	DESTINATION include
+)
 
 install(
 	EXPORT ${PROJECT_NAME}_target
